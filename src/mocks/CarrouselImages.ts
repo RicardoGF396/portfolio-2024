@@ -1,0 +1,18 @@
+export const carrouselImages = [
+  'https://portfolio-rgf.s3.amazonaws.com/img-1.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-2.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-3.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-4.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-5.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-6.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-7.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-8.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-9.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-10.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-11.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-12.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-13.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-14.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-15.webp',
+  'https://portfolio-rgf.s3.amazonaws.com/img-16.webp',
+];
