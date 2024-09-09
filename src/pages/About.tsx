@@ -31,7 +31,7 @@ export default function About() {
         ease: 'easeInOut',
         delay: 0.3,
       }}
-      className="flex w-full flex-col items-center"
+      className="mt-24 flex w-full flex-col items-center"
     >
       <div className="flex flex-col items-center">
         <div className="mt-12 w-full max-w-2xl">

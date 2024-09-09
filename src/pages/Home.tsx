@@ -4,7 +4,7 @@ import Content from '../components/Home/Content';
 
 export default function Home() {
   return (
-    <div className="mt-4 w-full max-w-7xl">
+    <div className="mt-16 w-full max-w-7xl">
       <div className="relative">
         <motion.div
           initial={{ opacity: 0 }}
