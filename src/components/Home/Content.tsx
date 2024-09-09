@@ -6,7 +6,7 @@ import { Briefcase, BookOpen, LightBulb, Fire } from 'heroicons-react';
 import ButtonContent from './ButtonContent';
 import Certifications from './Certifications';
 import Events from './Events';
-import Other from './Other';
+import More from './More';
 import SelectWork from './SelectWork';
 
 export default function Content() {
@@ -18,7 +18,7 @@ export default function Content() {
     { id: 1, name: 'Select work', icon: Briefcase },
     { id: 2, name: 'Certifications', icon: BookOpen },
     { id: 3, name: 'Achievements & Events', icon: LightBulb },
-    { id: 4, name: 'Other', icon: Fire },
+    { id: 4, name: 'More', icon: Fire },
   ];
 
   useEffect(() => {
@@ -61,7 +61,7 @@ export default function Content() {
         {selectedButton === 1 && <SelectWork />}
         {selectedButton === 2 && <Certifications />}
         {selectedButton === 3 && <Events />}
-        {selectedButton === 4 && <Other />}
+        {selectedButton === 4 && <More />}
       </div>
     </div>
   );

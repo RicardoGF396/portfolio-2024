@@ -5,7 +5,10 @@ export default function Certifications() {
   return (
     <div>
       {certifications.map((certification: ICertification) => (
-        <button
+        <a
+          href={certification.link}
+          target="_blank"
+          rel="noreferrer"
           type="button"
           key={certification.id}
           className="flex w-full items-center gap-6 rounded-xl px-3 py-4 text-left transition-all hover:bg-[#E9E9E9]"
@@ -21,7 +24,7 @@ export default function Certifications() {
               {certification.organization}
             </p>
           </div>
-        </button>
+        </a>
       ))}
     </div>
   );

@@ -29,7 +29,7 @@ export default function Header() {
         duration: 1,
         ease: 'easeInOut',
       }}
-      className="sticky top-4 z-[100] flex h-14 w-full max-w-7xl justify-between"
+      className="fixed top-4 z-[100] flex h-14 w-full max-w-7xl justify-between"
     >
       <div>
         <p className="font-medium">Ricardo González Flores</p>
@@ -38,7 +38,7 @@ export default function Header() {
         </p>
       </div>
 
-      <div className="absolute inset-x-0 m-auto flex size-full h-11 w-72 items-center justify-center gap-4 rounded-full border border-gray-200 bg-white/50 bg-clip-padding backdrop-blur-lg">
+      <div className="flex h-11 w-72 items-center justify-center gap-4 rounded-full border border-gray-200 bg-white/50 bg-clip-padding backdrop-blur-lg">
         <a
           className={twMerge(
             'px-4 py-1 rounded-full font-medium',
