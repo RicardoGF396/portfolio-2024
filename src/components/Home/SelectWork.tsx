@@ -1,21 +1,30 @@
 import { useState } from 'react';
 
 import Drawer from '@components/Drawer';
-import { ISelectWork } from '@interfaces/SelectWork';
+import { ISelectWork, ISelectWorkDetail } from '@interfaces/SelectWork';
 import { selectWork } from '@mocks/SelectWork';
+import { selectWorkDetail } from '@mocks/SelectWorkDetail';
 
 export default function SelectWork() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [showDrawer, setShowDrawer] = useState(false);
+  const [workSelected, setWorkSelected] = useState<ISelectWorkDetail | null>(
+    null,
+  );
 
-  const handleShowDrawer = () => {
-    setShowOverlay(true);
-    setShowDrawer(true);
+  const handleShowDrawer = (id: number) => {
+    const selectedWork = selectWorkDetail.find((work) => work.id === id);
+    if (selectedWork) {
+      setWorkSelected(selectedWork);
+      setShowOverlay(true);
+      setShowDrawer(true);
+    }
   };
 
   const handleCloseDrawer = () => {
     setShowOverlay(false);
     setShowDrawer(false);
+    setWorkSelected(null);
   };
 
   return (
@@ -25,14 +34,14 @@ export default function SelectWork() {
           <div>
             <button
               type="button"
-              className="w-full text-left"
-              onClick={handleShowDrawer}
+              className="mb-4 h-auto w-full overflow-hidden rounded-xl border border-[#E9E9E9] text-left transition-all hover:shadow-2xl"
+              onClick={() => handleShowDrawer(work.id)}
               key={work.id}
             >
               <img
                 alt="image-work"
                 src={work.image}
-                className="mb-4 h-96 w-full rounded-xl border border-[#E9E9E9] bg-[#F6F7F8]"
+                className=" h-96 w-full bg-[#F6F7F8]"
               />
             </button>
             <div className="flex w-full items-start justify-between">
@@ -49,6 +58,7 @@ export default function SelectWork() {
         handleClose={handleCloseDrawer}
         showContainer={showDrawer}
         showOverlay={showOverlay}
+        workSelected={workSelected || null}
       />
     </div>
   );

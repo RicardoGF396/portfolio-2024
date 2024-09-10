@@ -1,17 +1,20 @@
 import { useEffect } from 'react';
 
+import { ISelectWorkDetail } from '@interfaces/SelectWork';
 import { AnimatePresence, motion } from 'framer-motion';
 
 type DrawerProps = {
   showOverlay: boolean;
   showContainer: boolean;
   handleClose: () => void;
+  workSelected: ISelectWorkDetail | null;
 };
 
 export default function Drawer({
   showContainer,
   showOverlay,
   handleClose,
+  workSelected,
 }: DrawerProps) {
   useEffect(() => {
     if (showContainer) {
@@ -23,6 +26,8 @@ export default function Drawer({
       document.body.style.overflowY = '';
     };
   }, [showContainer, showOverlay]);
+
+  if (!workSelected) return null;
 
   return (
     <AnimatePresence>
@@ -53,68 +58,67 @@ export default function Drawer({
                 Close
               </button>
             </div>
-            {/* Resto del contenido del Drawer */}
-            <p className="text-lg font-bold">Project Name</p>
+            {/* Resto del contenido del Drawer, usando los detalles del trabajo seleccionado */}
+            <p className="text-lg font-bold">{workSelected.name}</p>
             <p className="w-full max-w-[520px] text-base text-[#8B8B8B]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              {workSelected.description}
             </p>
 
             <div className="mt-4">
               <div className="flex gap-4">
-                <p className="rounded-lg bg-[#F6F7F8] px-3 py-1.5 text-sm font-medium text-[#8B8B8B]">
-                  Technology 1
-                </p>
+                {workSelected.topics.map((topic: string) => (
+                  <p
+                    key={topic}
+                    className="rounded-lg bg-[#F6F7F8] px-3 py-1.5 text-sm font-medium text-[#8B8B8B]"
+                  >
+                    {topic}
+                  </p>
+                ))}
               </div>
             </div>
 
             <div className="mt-10 flex flex-col gap-y-4">
               <img
                 alt="img-1"
-                src="/api/placeholder/1024/520"
+                src={workSelected.imageOne}
                 className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover"
               />
-              <div className="flex flex-col justify-between gap-4 md:flex-row">
-                <img
-                  alt="img-2"
-                  src="/api/placeholder/500/520"
-                  className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover md:w-1/2"
-                />
-                <img
-                  alt="img-3"
-                  src="/api/placeholder/500/520"
-                  className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover md:w-1/2"
-                />
-              </div>
-              <div>
+              <img
+                alt="img-2"
+                src={workSelected.imageTwo}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+              />
+              <img
+                alt="img-3"
+                src={workSelected.imageThree}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+              />
+              <div className="my-8">
                 <p className="font-bold">More information</p>
                 <p className="w-full max-w-[520px] text-base text-[#8B8B8B]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {workSelected.moreInformation}
                 </p>
               </div>
               <img
                 alt="img-4"
-                src="/api/placeholder/1024/520"
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover"
+                src={workSelected.imageFour}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
               />
               <img
                 alt="img-5"
-                src="/api/placeholder/1024/520"
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover"
+                src={workSelected.imageFive}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
               />
-              <div className="flex flex-col justify-between gap-4 md:flex-row">
-                <img
-                  alt="img-6"
-                  src="/api/placeholder/500/520"
-                  className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover md:w-1/2"
-                />
-                <img
-                  alt="img-7"
-                  src="/api/placeholder/500/520"
-                  className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover md:w-1/2"
-                />
-              </div>
+              <img
+                alt="img-6"
+                src={workSelected.imageSix}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+              />
+              <img
+                alt="img-7"
+                src={workSelected.imageSeven}
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+              />
             </div>
           </motion.div>
         </motion.div>
