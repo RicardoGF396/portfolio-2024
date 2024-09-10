@@ -57,7 +57,7 @@ export default function ContactDrawer({
               damping: 20,
               duration: 0.5,
             }}
-            className="fixed inset-x-0 bottom-0 z-[1000] mx-auto h-[342px] w-[764px] rounded-t-3xl border border-gray-200 bg-white pl-12 pr-6 pt-4"
+            className="fixed inset-x-0 bottom-0 z-[1000] mx-auto h-[342px] w-full max-w-[764px] rounded-t-3xl border border-gray-200 bg-white pl-12 pr-6 pt-4"
           >
             <div className="flex justify-end">
               <button
