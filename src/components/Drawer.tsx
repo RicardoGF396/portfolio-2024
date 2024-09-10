@@ -65,7 +65,7 @@ export default function Drawer({
             </p>
 
             <div className="mt-4">
-              <div className="flex gap-4">
+              <div className="flex flex-wrap gap-4">
                 {workSelected.topics.map((topic: string) => (
                   <p
                     key={topic}
@@ -86,12 +86,12 @@ export default function Drawer({
               <img
                 alt="img-2"
                 src={workSelected.imageTwo}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
               <img
                 alt="img-3"
                 src={workSelected.imageThree}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
               <div className="my-8">
                 <p className="font-bold">More information</p>
@@ -102,22 +102,22 @@ export default function Drawer({
               <img
                 alt="img-4"
                 src={workSelected.imageFour}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
               <img
                 alt="img-5"
                 src={workSelected.imageFive}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
               <img
                 alt="img-6"
                 src={workSelected.imageSix}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
               <img
                 alt="img-7"
                 src={workSelected.imageSeven}
-                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-contain"
+                className="h-[520px] w-full rounded-lg border bg-[#F6F7F8] object-cover lg:object-contain"
               />
             </div>
           </motion.div>

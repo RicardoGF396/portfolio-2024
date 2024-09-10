@@ -41,10 +41,10 @@ export default function SelectWork() {
               <img
                 alt="image-work"
                 src={work.image}
-                className=" h-96 w-full bg-[#F6F7F8]"
+                className=" h-96 w-full bg-[#F6F7F8] object-cover"
               />
             </button>
-            <div className="flex w-full items-start justify-between">
+            <div className="flex w-full items-start justify-between gap-x-4">
               <p className="font-medium text-[#8B8B8B]">{work.year}</p>
               <div className="w-[364px]">
                 <p className="font-bold">{work.name}</p>

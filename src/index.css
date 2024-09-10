@@ -75,3 +75,15 @@ button {
 .filter_green {
   filter: invert(28%) sepia(88%) saturate(983%) hue-rotate(83deg) brightness(96%) contrast(106%);
 }
+
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+  }

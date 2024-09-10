@@ -4,7 +4,7 @@ import Content from '../components/Home/Content';
 
 export default function Home() {
   return (
-    <div className="mt-16 w-full max-w-7xl">
+    <div className="w-full max-w-7xl lg:mt-16">
       <div className="relative">
         <motion.div
           initial={{ opacity: 0 }}
@@ -30,7 +30,7 @@ export default function Home() {
             Everything can be better
           </motion.p>
           <div className="w-[496px]">
-            <div className="relative h-[60px] w-full overflow-hidden">
+            <div className="relative h-[50px] w-full overflow-hidden md:h-[60px]">
               <motion.h1
                 initial={{ top: 54, opacity: 0 }}
                 animate={{ top: 0, opacity: 1 }}
@@ -38,12 +38,12 @@ export default function Home() {
                   duration: 1.6,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="absolute inset-x-0 mb-6 text-center text-5xl font-bold leading-[54px]"
+                className="absolute inset-x-0 mb-6 text-center text-4xl font-bold leading-[54px] md:text-5xl"
               >
                 Software Engineer
               </motion.h1>
             </div>
-            <div className="relative h-[60px] w-full overflow-hidden">
+            <div className="relative h-[50px] w-full overflow-hidden md:h-[60px]">
               <motion.h1
                 initial={{ top: 54, opacity: 0 }}
                 animate={{ top: 0, opacity: 1 }}
@@ -52,7 +52,7 @@ export default function Home() {
                   ease: [0.22, 1, 0.36, 1],
                   delay: 0.3,
                 }}
-                className="absolute inset-x-0 mb-6 text-center text-5xl font-bold leading-[54px]"
+                className="absolute inset-x-0 mb-6 text-center text-4xl font-bold leading-[54px] md:text-5xl"
               >
                 and Designer{' '}
                 <span className="bg-gradient-to-tl from-[#C25D00] to-[#FF7A00] bg-clip-text text-transparent">

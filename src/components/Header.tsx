@@ -29,9 +29,9 @@ export default function Header() {
         duration: 1,
         ease: 'easeInOut',
       }}
-      className="fixed top-4 z-[100] flex h-14 w-full max-w-7xl justify-between"
+      className="fixed bottom-4 z-[100] flex h-14 w-full max-w-7xl justify-center lg:top-4  lg:justify-between lg:pl-8"
     >
-      <div>
+      <div className="hidden lg:block">
         <p className="font-medium">Ricardo González Flores</p>
         <p className="text-sm font-medium text-[#8D8D8D]">
           Software Engineer & Designer
