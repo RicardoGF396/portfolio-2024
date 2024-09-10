@@ -92,4 +92,26 @@ export const more: IMore[] = [
     type: 'Figma Project',
     link: 'https://www.figma.com/design/7se3vjnyjidXP3qoQZZJbR/Holcim-App?node-id=22-704&m=dev&t=1vblo73vW99w64Oe-1',
   },
+
+  {
+    id: 17,
+    image: 'https://portfolio-rgf.s3.amazonaws.com/orkos-brand.png',
+    name: 'Orkos',
+    type: 'Branding',
+    link: 'https://www.figma.com/design/mV12GSUYTpTd0wtx3QoL36/Orkos-Branding-V2?node-id=0-1&m=dev&t=I2c5iWTWQ0YOdFIS-1',
+  },
+  {
+    id: 18,
+    image: 'https://portfolio-rgf.s3.amazonaws.com/dps.png',
+    name: 'Digital Picking',
+    type: 'Branding',
+    link: 'https://www.figma.com/design/T1Xvg6oYhQuUa24CxvsE1v/Heineken-Rebrading?node-id=1-10&m=dev&t=Sc7sUu3mTaDadzPH-1',
+  },
+  {
+    id: 19,
+    image: 'https://portfolio-rgf.s3.amazonaws.com/three-pillars.png',
+    name: 'Three Pilars',
+    type: 'Figma Project',
+    link: 'https://www.figma.com/design/V9ksZQ1d0rAuICzMglXO1I/Three-Pillars?node-id=0-1&m=dev&t=eXnef5dZmuuzPTrQ-1',
+  },
 ];
