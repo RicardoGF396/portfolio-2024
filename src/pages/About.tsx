@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-array-index-key */
 import { useEffect } from 'react';
 
@@ -50,22 +51,33 @@ export default function About() {
           <div className="mt-10 flex flex-col items-center">
             <div className="flex w-full max-w-[472px] flex-col items-center">
               <p className="text-[#656565]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                Vestibulum auctor ornare leo, non suscipit magna interdum eu.
-                Curabitur pellentesque nibh nibh, at maximus ante fermentum sit
-                amet. Pellentesque commodo lacus at sodales sodales.
-              </p>
-              <br />
-              <p className="text-[#656565]">
-                Quisque sagittis orci ut diam condimentum, vel euismod erat
-                placerat. In iaculis arcu eros, eget tempus orci facilisis id.
-                Praesent lorem orci, mattis non efficitur id, ultricies vel
-                nibh. Sed volutpat lacus vitae gravida viverra. Fusce vel tempor
-                elit. Proin tempus, magna id scelerisque vestibulum, nulla ex
-                pharetra sapien, tempor posuere massa neque nec felis.
+                I am a dedicated Software Engineer and Designer with a strong
+                foundation in front-end development and UI/UX design. I
+                graduated from Universidad La Salle Bajío with a degree in
+                Software Engineering, and I have consistently pursued
+                opportunities to expand my skill set, especially in web and
+                mobile development.
+                <br />
+                <br />
+                Over the course of my career, I've worked in various roles where
+                I honed my expertise in React, React Native, and TypeScript,
+                while also contributing significantly to design aspects. I am
+                passionate about creating seamless user experiences, and my work
+                spans a diverse range of projects, from enterprise-level
+                applications to freelance mobile apps.
+                <br />
+                <br />
+                What drives me the most is the ability to imagine new products
+                or apps and bring them to life. I find it wonderful to envision
+                something and then create it. I love programming because it
+                allows me to invent and turn my ideas into reality.
+                <br />
+                <br />
+                With experience working in companies like CBQA Solutions and
+                Seteneal, I thrive in fast-paced environments where
+                problem-solving and innovation are key. I approach each project
+                as if it were my own, always aiming to deliver exceptional
+                results.
               </p>
 
               <div className="mt-10 w-full ">
