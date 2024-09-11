@@ -1,8 +1,13 @@
+import { useState } from 'react';
+
 import { motion } from 'framer-motion';
+import { DownloadOutline } from 'heroicons-react';
 
 import Content from '../components/Home/Content';
 
 export default function Home() {
+  const [isHoverCV, setIsHoverCV] = useState(false);
+
   return (
     <div className="w-full max-w-7xl lg:mt-16">
       <div className="relative">
@@ -68,12 +73,19 @@ export default function Home() {
               duration: 1,
               delay: 0.5,
             }}
+            onMouseEnter={() => setIsHoverCV(true)}
+            onMouseLeave={() => setIsHoverCV(false)}
             download
             href="/Ricardo_Gonzalez_Flores_Resume.pdf"
-            className="mt-8 flex items-center gap-x-2 rounded-full bg-[#E5E5E5] py-2 pl-4 pr-2 font-medium"
+            className="mt-8 flex items-center gap-x-2 rounded-full bg-[#E5E5E5] py-2 pl-4 pr-2 font-medium transition-all hover:bg-[#0f0f0f] hover:text-[#F0F0F0]"
           >
             Download Resume
-            <img alt="download-icon" src="/icons/download.svg" />
+            <DownloadOutline
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              color={isHoverCV ? '#F0F0F0' : '#0F0F0F'}
+              size={24}
+            />
           </motion.a>
         </div>
       </div>

@@ -21,7 +21,10 @@ export default function HeaderLink({
       href={link}
       target="_blank"
       rel="noreferrer"
-      className="flex items-center gap-x-2 font-bold transition-all hover:text-[#0088cc]"
+      className={twMerge(
+        'flex items-center gap-x-2 font-bold transition-all hover',
+        isHover ? cssClass : '',
+      )}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
